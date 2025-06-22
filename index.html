@@ -7,10 +7,22 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
-        /* Paste the CSS above here */
+        /* Optional inline CSS (but better in style.css) */
+        #particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
     </style>
 </head>
 <body>
+    <!-- ✅ Particle background container -->
+    <div id="particles"></div>
+
+    <!-- 🌌 Main Chatbox UI -->
     <div id="chatbox">
         <!-- Fixed Header -->
         <div id="chatHeader">Anique</div>
@@ -23,21 +35,29 @@
             <input type="text" id="userInput" placeholder="Type your message here...">
             <button id="sendButton" onclick="sendMessage()">Send</button>
         </div>
-        <div id="starfield">
-            <!-- Generate stars dynamically with JavaScript -->
-        </div>
+
+        <!-- Starfield animation background -->
+        <div id="starfield"></div>
+
+        <!-- Typing indicator animation -->
         <div class="typing-indicator">
             <span></span>
             <span></span>
             <span></span>
         </div>
     </div>
+
+    <!-- ✅ Particle.js library -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+    <!-- ✅ Load particle config (must have particles.json in the same directory) -->
     <script>
         particlesJS.load('particles', 'particles.json', function() {
             console.log('Particles loaded!');
         });
     </script>
+
+    <!-- ✅ Your custom JavaScript logic -->
     <script src="script.js"></script>
 </body>
 </html>
