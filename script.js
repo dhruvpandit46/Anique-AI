@@ -1812,7 +1812,7 @@ function playVoice(response) {
     }
 
     if (typeof text === "string") {
-        fetch('https://anique-voice-server.onrender.com/generate_voice', {
+        fetch('https://anique-ai-voice.onrender.com', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
