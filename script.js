@@ -1805,6 +1805,8 @@ document.getElementById("userInput").addEventListener("keydown", function (e) {
     }
 });
 
+
+
 function playVoice(response) {
     let text = response;
     if (typeof response === "object" && response.text) {
@@ -1812,7 +1814,7 @@ function playVoice(response) {
     }
 
     if (typeof text === "string") {
-        fetch('https://anique-ai-voice.onrender.com', {
+        fetch('https://anique-ai-voice.onrender.com/generate_voice', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -1828,6 +1830,7 @@ function playVoice(response) {
         .catch(error => console.error("Error generating voice:", error));
     }
 }
+
 
 
 
